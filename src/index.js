@@ -1,13 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import HelloWord from './helloword/helloword';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const newLocal = <HelloWord />;
 root.render(
   <React.StrictMode>
-    <App />
+    {newLocal}
+    
   </React.StrictMode>
 );
 
