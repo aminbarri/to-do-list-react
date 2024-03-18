@@ -4,13 +4,36 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 import HelloWord from './helloword/helloword';
-
+import TextField from './forms/textField';
+import Fruits from './fruits/fruits';
+import Counter from './counter/counter';
+import Event from './events/events';
+import Form from './forms/form';
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const newLocal = <HelloWord />;
+const fruitArray = [
+  'aple',
+  'orange',
+  'lemon',
+  'strawbary'
+]
 root.render(
   <React.StrictMode>
-    {newLocal}
-    
+     <HelloWord lastName='amin' />
+     <TextField inputName="someName" inputLabel="XYY" >
+      enter you name
+     </TextField>
+     
+     <TextField inputName="someName" inputLabel="XYY" >
+      enter your cat name
+     </TextField >
+
+    <Fruits fruits={fruitArray} />
+    <Counter  step={3} initialValue={2}/>
+
+   <Event/>
+
+   <Form />
+
   </React.StrictMode>
 );
 
