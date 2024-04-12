@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import reportWebVitals from './reportWebVitals';
-
+import ProductList from './tp/store/productlist';
 import HelloWord from './helloword/helloword';
 import TextField from './forms/textField';
-import Fruits from './fruits/fruits';
+import Fruits from './fruits/fruitsList';
 import Counter from './counter/counter';
 import Event from './events/events';
-import Form from './forms/form';
+import Form from './forms/form_2';
+import ToggleName from './toggle/toggleName';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const fruitArray = [
   'aple',
@@ -18,6 +20,13 @@ const fruitArray = [
 ]
 root.render(
   <React.StrictMode>
+    <Form />
+  
+  </React.StrictMode>
+);
+
+ /*
+  <ProductList />
      <HelloWord lastName='amin' />
      <TextField inputName="someName" inputLabel="XYY" >
       enter you name
@@ -27,15 +36,16 @@ root.render(
       enter your cat name
      </TextField >
 
-    <Fruits fruits={fruitArray} />
-    <Counter  step={3} initialValue={2}/>
+    <Fruits />
+    <Counter  step={1} initialValue={2}/>
 
    <Event/>
 
    <Form />
 
-  </React.StrictMode>
-);
+   <ToggleName />
+ */
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

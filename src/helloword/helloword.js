@@ -1,13 +1,20 @@
-export default function HelloWord({lastName}){
-    console.log(); 
-    const age= 20
- 
+import { useEffect } from "react";
 
- return ( <div>
+export default function HelloWord({lastName}){
+  
+  
+    useEffect(() => {
+        return () => {
+            console.log('Component is unmounted');
+        };
+    }, []);
+
+   const age =20
+ return  <div>
        
             <h1>hello {lastName}
                  {age >=18 ?' adult' :' young'}  </h1>
-                </div>)
+                </div>
     /*
    
     let isAdult=false
